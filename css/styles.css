@@ -4,10 +4,10 @@ html, body, div {
     width: 100%;
 
     /* Set the height to match that of the viewport. */
-    height: 100vh;
+    /*height: 100vh;
 
     /* Set the width to match that of the viewport. */
-    width: 100vw;
+    /*width: 100vw;*/
 
     /* Remove any browser-default margins. */
 }
@@ -16,22 +16,23 @@ html {
   background: grey;
 }
 
-.container-fluid {
+body {
+  background: lightgrey;
+}
+
+#title {
+  height: auto;
   background: lime;
 }
 
-p {
-  color: orange;
-}
-
 .row {
-  height:50%;
+  height: auto;
   background: yellow;
 }
 
-.col-md-8 {
-  height: 100%;
-  background: blue;
+.col-md-7 {
+  height: auto;
+  background: lightblue;
 }
 
 img {

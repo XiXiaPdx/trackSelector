@@ -24,16 +24,30 @@
     <title>Epicodus Track Selector</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-8">
-          <img src="img/catcow.jpg">
-        </div>
-
+    <div class="container-fluid" id="wrapper">
+      <!-- title div -->
+      <div class="container" id="title">
+        <h1>Epicodus Track Selection Tool</h1>
+        <p> Explanation and description of the tool</p>
+        <p> 5 tracks go here </p>
       </div>
+      <!-- question, track selected, and form div -->
+      <div class="container" id="questionTrackForm">
+        <div class="row" id="displayRow">
+          <!-- question and track selected output column -->
+          <div class="col-md-7" id="questionTrackOutput">
+            <p> questions go here </p>
+          </div>
+          <!-- form answers choose column -->
+          <div class="col-md-5" id="formAnswerSelector">
+            <p> Form answer choices here </p>
+            <form id="answerChoices">
+              
+            </form>
+          </div>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
