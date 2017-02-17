@@ -2,6 +2,7 @@ var questionCounter = 1;
 
 var rightTrack = function () {
   $("#yourTracks").show();
+  $("#formAnswerSelector").hide();
 }
 
 $(document).ready(function() {
@@ -18,6 +19,7 @@ $(document).ready(function() {
 
 
       $("#question"+questionCounter).show();
+      document.getElementById("answerChoices").reset();
     }
 
   event.preventDefault();
