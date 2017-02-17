@@ -1,7 +1,8 @@
 $(document).ready(function() {
-  $("form#some-form").submit(function(event) {
-  var someInput = $("input#some-input").val();
+  $("form#answerChoices").submit(function(event) {
+  var someInput = $("input:radio[name=tendency]:checked").val();
+  console.log(someInput);
   event.preventDefault();
-});
+  });
 
-};
+});
