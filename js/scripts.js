@@ -12,6 +12,7 @@ var dotnet =0;
 var adjustTrackScore = function (userAnswer) {
   var userAnswer = userAnswer
   var classes = $("#question"+questionCounter).attr('class').split(' ');
+  console.log (classes);
     for (i = 1, l =classes.length; i < l; i++) {
        updateWhichTracks (classes[i], i, userAnswer);
        console.log(questionCounter, ruby, php, android, design, dotnet);
@@ -30,7 +31,7 @@ var adjustTrackScore = function (userAnswer) {
       android = (userAnswer/i) + android;
     } else if (classFromArray === "design"){
       design = (userAnswer/i) + design;
-    } else if (classFromArray === "dotnet"){
+    } else {
       dotnet = (userAnswer/i) + dotnet;
     }
 }
