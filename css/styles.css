@@ -30,11 +30,18 @@ body {
   background: yellow;
 }
 
-.col-md-7 {
+#questionTrackOutput {
   height: auto;
   background: lightblue;
 }
 
+.question {
+  display: none;
+}
+
+#question1 {
+  display: block;
+}
 img {
   max-width:100%;
   max-height:100%;
