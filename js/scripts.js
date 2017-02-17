@@ -12,10 +12,8 @@ var dotnet =0;
 var adjustTrackScore = function (userAnswer) {
   var userAnswer = userAnswer
   var classes = $("#question"+questionCounter).attr('class').split(' ');
-  console.log (classes);
     for (i = 1, l =classes.length; i < l; i++) {
        updateWhichTracks (classes[i], i, userAnswer);
-       console.log(questionCounter, ruby, php, android, design, dotnet);
     }
 }
 
@@ -36,6 +34,19 @@ var adjustTrackScore = function (userAnswer) {
     }
 }
 
+// rank order final global variables. Use those variables to display final tracks.
+var showFinalTracks = function () {
+  var allTrackScores = [[ruby, 'ruby'], [php, 'php'], [android,'android'], [design,'design'], [dotnet,'dotnet']];
+  allTrackScores.sort(function(a, b){return b[0]-a[0]});
+  $("#formAnswerSelector").hide();
+  $(".yourTracks").show();
+  for (i = 0; i < 3; i++) {
+      var track = ((allTrackScores [i])[1]);
+      console.log(track);
+      $("#"+track+"Track").show();
+  }
+
+}
 //front end logic. Form submission. Show and Hide questions and final track selections.
 
 $(document).ready(function() {
@@ -47,9 +58,8 @@ $(document).ready(function() {
       adjustTrackScore (userAnswer);
       $("#question"+questionCounter).hide();
       questionCounter++;
-      if (questionCounter === 11) {
-        $("#yourTracks").show();
-        $("#formAnswerSelector").hide();
+      if (questionCounter === 2) {
+        showFinalTracks();
       }
       $("#question"+questionCounter).show();
       document.getElementById("answerChoices").reset();

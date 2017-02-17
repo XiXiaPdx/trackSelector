@@ -43,9 +43,30 @@ body {
   display: block;
 }
 
-.tracksChosen{
+.yourTracks {
   display: none;
+  height: auto;
+  width: 60%;
+  background: green;
 }
+
+#rubyTrack{
+  display:none;
+}
+#phpTrack{
+  display:none;
+}
+#androidTrack {
+  display:none;
+}
+#designTrack{
+  display:none;
+}
+#dotNetTrack{
+  display:none;
+}
+
+
 img {
   max-width:100%;
   max-height:100%;
