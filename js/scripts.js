@@ -15,25 +15,25 @@ var adjustTrackScore = function (userAnswer) {
   var userAnswer = userAnswer
   var classes = $("#question"+questionCounter).attr('class').split(' ');
     for (i = 1, l =classes.length; i < l; i++) {
-       updateWhichTracks (classes[i], userAnswer);
+       updateWhichTracks (classes[i], i, userAnswer);
        console.log(questionCounter, ruby, php, android, design, dotnet);
     }
   // loop through array
 }
 
-  var updateWhichTracks = function (classFromArray, userAnswer) {
+  var updateWhichTracks = function (classFromArray, i, userAnswer) {
 
     if (classFromArray === "ruby") {
-      ruby = userAnswer + ruby;
+      ruby = (userAnswer/i) + ruby;
     } else if (classFromArray === "php"){
-      php = userAnswer + php;
+      php = (userAnswer/i) + php;
     }
       else if (classFromArray === "android"){
-      android = userAnswer + android;
+      android = (userAnswer/i) + android;
     } else if (classFromArray === "design"){
-      design = userAnswer + design;
+      design = (userAnswer/i) + design;
     } else if (classFromArray === "dotnet"){
-      dotnet = userAnswer + dotnet;
+      dotnet = (userAnswer/i) + dotnet;
     }
 }
 
