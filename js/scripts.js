@@ -1,6 +1,9 @@
 var questionCounter = 1;
-var track1 =0;
-var track2 =0;
+var ruby =0;
+var php =0;
+var android =0;
+var design =0;
+var dotnet =0;
 
 var displayTracks = function () {
   $("#yourTracks").show();
@@ -8,10 +11,30 @@ var displayTracks = function () {
 }
 
 var adjustTrackScore = function (userAnswer) {
-  if (($("#question"+questionCounter).hasClass("track1"))) {
-    track1 = userAnswer + track1;
-    console.log(track1);
-  }
+
+  var userAnswer = userAnswer
+  var classes = $("#question"+questionCounter).attr('class').split(' ');
+    for (i = 1, l =classes.length; i < l; i++) {
+       updateWhichTracks (classes[i], userAnswer);
+       console.log(questionCounter, ruby, php, android, design, dotnet);
+    }
+  // loop through array
+}
+
+  var updateWhichTracks = function (classFromArray, userAnswer) {
+
+    if (classFromArray === "ruby") {
+      ruby = userAnswer + ruby;
+    } else if (classFromArray === "php"){
+      php = userAnswer + php;
+    }
+      else if (classFromArray === "android"){
+      android = userAnswer + android;
+    } else if (classFromArray === "design"){
+      design = userAnswer + design;
+    } else if (classFromArray === "dotnet"){
+      dotnet = userAnswer + dotnet;
+    }
 }
 
 $(document).ready(function() {
@@ -25,7 +48,7 @@ $(document).ready(function() {
       $("#question"+questionCounter).hide();
 
       questionCounter++;
-      if (questionCounter === 3) {
+      if (questionCounter === 11) {
         displayTracks ();
       }
 
