@@ -55,7 +55,7 @@ $(document).ready(function() {
       adjustTrackScore (userAnswer);
       $("#question"+questionCounter).hide();
       questionCounter++;
-      if (questionCounter === 3) {
+      if (questionCounter === 11) {
         showFinalTracks();
       }
       $("#question"+questionCounter).fadeIn();
