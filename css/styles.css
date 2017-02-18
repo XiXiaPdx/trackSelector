@@ -1,23 +1,13 @@
 html, body, div {
-    /* Height and width fallback for older browsers. */
     height: 100%;
     width: 100%;
-
-    /* Set the height to match that of the viewport. */
-    /*height: 100vh;
-
-    /* Set the width to match that of the viewport. */
-    /*width: 100vw;*/
-
-    /* Remove any browser-default margins. */
 }
-
 
 body {
   background: #3d3e3f;
 }
 
-#title {
+.jumbotron {
   height: auto;
   background-color: #fc9032;
 }
@@ -30,15 +20,12 @@ body {
   height: auto;
 }
 
-
-
 #questionTrackOutput {
   height: auto;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
 }
-
 
 #answerChoices {
   margin-right: auto;
@@ -69,16 +56,19 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  color: white;
 }
 
 #rubyTrack{
   display:none;
   height: 100%;
 }
+
 #phpTrack{
   display:none;
   height: 100%;
 }
+
 #androidTrack {
   display:none;
   height: 100%;
@@ -87,11 +77,11 @@ body {
   display:none;
   height: 100%;
 }
+
 #dotnetTrack{
   display:none;
   height: 100%;
 }
-
 
 img {
   max-width:100%;
