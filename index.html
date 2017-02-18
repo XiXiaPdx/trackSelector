@@ -21,47 +21,111 @@
 
     <script src="js/scripts.js" type="text/javascript"></script>
 
-    <title>Epicodus Track Selector</title>
+    <title>Epicodus Course  Predictor</title>
   </head>
   <body>
     <div class="container-fluid" id="wrapper">
       <!-- title div -->
-      <div class="container" id="title">
-        <h1>Epicodus Track Selection Tool</h1>
-        <p> Explanation and description of the tool</p>
-        <p> 5 tracks go here </p>
+      <div class="container jumbotron" id="title"  >
+        <h1>Epicodus Course Prediction Tool</h1>
+          <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2">
+              <img src="img/ruby.png" alt="ruby jewel icon">
+              <h3>Ruby/Rails</h3>
+            </div>
+            <div class="col-md-2">
+              <img src="img/php.png" alt="php icon">
+              <h3>PHP/Drupal</h3>
+            </div>
+            <div class="col-md-2">
+              <img src="img/android.png" alt="robot  icon">
+              <h3>Java/Android</h3>
+            </div>
+            <div class="col-md-2">
+              <img src="img/css.png" alt="CSS icon">
+              <h3>CSS/Design</h3>
+            </div>
+            <div class="col-md-2">
+              <img src="img/dotnet.png" alt="C# icon">
+              <h3>C#/.Net </h3>
+            </div>
+            <div class="col-md-1">
+            </div>
+          </div>
+
+
+
+          <p> By answering the following 10 questions, it will help us show you which 3 courses you might enjoy the most at Epicodus.
+          </p>
       </div>
       <!-- question, track selected, and form div -->
       <div class="container" id="questionTrackForm">
-        <div class="row" id="displayRow">
+        <div class="row" id="questionTrackOutput">
           <!-- question and track selected output column -->
-          <div class="col-md-7" id="questionTrackOutput">
-            <h2 class="question ruby design dotnet"  id="question1"> question 1 </h2>
-            <h2 class="question php dotnet android"   id="question2"> question 2 </h2>
-            <h2 class="question android php ruby"   id="question3"> question 3 </h2>
-            <h2 class="question design android php"   id="question4"> question 4 </h2>
-            <h2 class="question dotnet ruby design"   id="question5"> question 5 </h2>
-            <h2 class="question ruby"   id="question6"> question 6 </h2>
-            <h2 class="question php"   id="question7"> question 7 </h2>
-            <h2 class="question android"   id="question8"> question 8 </h2>
-            <h2 class="question design"   id="question9"> question 9 </h2>
-            <h2 class="question dotnet"   id="question10"> question 10 </h2>
+            <h2 class="question ruby design dotnet"  id="question1"> You want to know how passwords work over the internet </h2>
+            <h2 class="question php dotnet android"   id="question2"> You want to work on big sites that are content driven </h2>
+            <h2 class="question android php ruby"   id="question3"> You can't wait to make your first mobile app </h2>
+            <h2 class="question design android php"   id="question4"> Your favorite sites are animated portfolio sites</h2>
+            <h2 class="question dotnet ruby design"   id="question5"> You want to work for solid enterprise level operations </h2>
+            <h2 class="question ruby"   id="question6"> You want to know how to build a database for your new social media web app </h2>
+            <h2 class="question php"   id="question7"> You are going to work on building Word Press sites</h2>
+            <h2 class="question android"   id="question8"> Making mobile friendly apps are important to you</h2>
+            <h2 class="question design"   id="question9"> You dream in RGB color charts</h2>
+            <h2 class="question dotnet"   id="question10"> You live near Seattle</h2>
+        </div>
 
-            <div class="yourTracks">
-             <h1 >We think you might like these tracks, in order!</h1>
-             <h2 id="rubyTrack"> You would love RUBY! </h2>
-             <h2 id="phpTrack"> You would love PHP! </h2>
-             <h2 id="designTrack"> You would love Design! </h2>
-             <h2 id="dotnetTrack"> You would love C#/.Net! </h2>
-             <h2 id="androidTrack"> You would love Java/Android! </h2>
-           </div>
+        <!-- the tracks -->
+          <div class="yourTracks">
+             <h1 >We think you might like these tracks</h1>
+             <div class="row" id="rankRow">
+               <div class="col-md-4">
+                 <h1> First Choice </h1>
+               </div>
+               <div class="col-md-4">
+                 <h1> Second Choice </h1>
+               </div>
+               <div class="col-md-4">
+                 <h1> Third Choice </h1>
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4" id="rubyTrack">
+                <img src="img/ruby.png" alt="ruby jewel icon">
+                <p class="trackDescription">Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby.</p>
+              </div>
+              <div class="col-md-4" id="phpTrack">
+                <img src="img/php.png" alt="php icon">
+                <p class="trackDescription">PHP is most used in content-heavy websites with relatively little user interaction. The most popular content management systems - Wordpress, Drupal, and Joomla - are all written in PHP, and everything from local restaurants' websites up through large complex government deployments are built with these tools. </p>
+              </div>
+              <div class="col-md-4" id="androidTrack">
+                <img src="img/android.png" alt="robot  icon">
+                <p class="trackDescription">Java is a favorite of enterprise companies, but its appeal is broader as well: it's one of the most popular of all programming languages, and it's used in everything from for high-performance processing to building Android user interfaces.  </p>
+              </div>
+              <div class="col-md-4" id="designTrack">
+                <img src="img/css.png" alt="CSS icon">
+                <p class="trackDescription">CSS is the language for describing the presentation of Web pages, including colors, layout, fonts, and other stylistic choices. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, and printers. HTML</p>
+              </div>
+              <div class="col-md-4" id="dotnetTrack">
+                <img src="img/dotnet.png" alt="C# icon">
+                <p class="trackDescription">C# is most popular among bigger established businesses, often for building internal software. Because it's been around for a long time and has the backing of Microsoft, it is one of the most in-demand languages in the job market. </p>
+              </div>
+            </div>
           </div>
+
+           <!-- <h2 id="rubyTrack"> You would love RUBY! </h2>
+           <h2 id="phpTrack"> You would love PHP! </h2>
+           <h2 id="designTrack"> You would love Design! </h2>
+           <h2 id="dotnetTrack"> You would love C#/.Net! </h2>
+           <h2 id="androidTrack"> You would love Java/Android! </h2> -->
+
           <!-- form answers choose column -->
-          <div class="col-md-5" id="formAnswerSelector">
-            <p> Form answer choices here </p>
+          <div class="row" id="formAnswerSelector">
+
             <!-- FORM STARTS HERE -->
-            <form id="answerChoices">
-              <div class="radio">
+            <form id="answerChoices" >
+              <div class="radio btn-group-lg" >
                 <label>
                   <input type="radio" name="tendency" value="1">
                   Describes me the least
@@ -85,12 +149,10 @@
                   Describes me the most
                 </label>
               </div>
-              <button type="submit" class="btn">Submit</button>
+              <button type="submit" class="btn-lg">Submit</button>
             </form>
           </div>
         </div>
       </div>
-
-    </div>
   </body>
 </html>
